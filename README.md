@@ -1,5 +1,5 @@
 <h1 align="center">  
-  A4MD
+  A4MD - Validation of conformational space
   <h4 align="center">
 
   <a href="https://analytics4md.org/"><img src="https://avatars.githubusercontent.com/u/32650548?s=200&v=4"/></a>

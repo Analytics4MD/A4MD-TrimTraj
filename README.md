@@ -89,7 +89,12 @@ There are many things that can be customized in this Notebook, e.g. the paths to
 <i class="fa fa-file-text-o"></i> Silvina Caino-Lores, Michel Cuendet, Jack Marquez, Ekaterina Kots, Trilce Estrada, Ewa Deelman, Harel Weinstein, and Michela Taufer.
 <b>Runtime steering of molecular dynamics simulations through in situ analysis and annotation of collective variables.</b>
 <i>ACM Proceedings of the Platform for Advanced Scientific Computing Conference.</i>
-(2023). <a href="https://dl.acm.org/doi/pdf/10.1145/3592979.3593420" target="_blank">[link]</a>
+ACM (2023). <a href="https://dl.acm.org/doi/pdf/10.1145/3592979.3593420" target="_blank">[link]</a>
+
+<i class="fa fa-file-text-o"></i> Harshita Sahni, Hector Carrillo-Cabada, Ekaterina Kots, Silvina Caino-Lores, Jack Marquez, Ewa Deelman, Michel Cuendet, Harel Weinstein, Michela Taufer, and Trilce Estrada.
+<b>Online Boosted Gaussian Learners for In-Situ Detection and Characterization of Protein Folding States in Molecular Dynamics Simulations.</b>
+<i>2023 IEEE 19th International Conference on e-Science (e-Science).</i>
+IEEE (2023). <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10254895" target="_blank">[link]</a>
 
 <i class="fa fa-file-text-o"></i> Hector Carrillo-Cabada, Jeremy Benson, Asghar Razavi, Brianna Mulligan, Michel A. Cuendet, Harel Weinstein, Michela Taufer, and Trilce Estrada.
 <b>A Graphic Encoding Method for Quantitative Classification of Protein Structure and Representation of Conformational Changes</b>

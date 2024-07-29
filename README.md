@@ -31,6 +31,8 @@ In order to use this Jupyter Notebook, your system should have the following ins
 - Anaconda
 - python 3.8.18
 
+**NOTE:** It is important to have the simulation data to work with the Jupyter Notebook. The entire dataset with all the trajectories and also the frames indentified as the closest to the minimum energy can be found [here](https://doi.org/10.7910/DVN/DSTBPK)
+
 ---
 ## Dependencies
 

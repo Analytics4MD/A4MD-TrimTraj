@@ -16,6 +16,9 @@
   <a href="#copyright-and-license">Copyright and License</a>
 </p>
 
+## Authors
+Jack Marquez, Silvina Caino-Lores, Michel Cuendet, Ekaterina Kots, Trilce Estrada, Ewa Deelman, Harel Weinstein, and Michela Taufer.
+
 ## About A4MD
 
 The project's harnessed knowledge of molecular structures' transformations at runtime can be used to steer simulations to more promising areas of the simulation space, identify the data that should be written to congested parallel file systems, and index generated data for retrieval and post-simulation analysis. Supported by this knowledge, molecular dynamics workflows such as replica exchange simulations, Markov state models, and the string method with swarms of trajectories can be executed from the outside (i.e., without reengineering the molecular dynamics code) 
@@ -128,3 +131,12 @@ This research was supported by the National Science Foundation (NSF) under grant
 the Oak Ridge Leadership Computing Facility under allocation CSC427; 
 the Extreme Science and Engineering Discovery Environment (XSEDE) under allocation TG-CIS200053;
 and IBM through a Shared University Research Award.
+
+## Contact 
+Dr. Michela Taufer
+
+[Global Computing Lab](https://globalcomputing.group/)
+
+University of Tennessee
+
+taufer@acm.org

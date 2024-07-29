@@ -68,19 +68,18 @@ After installing and activating our conda environment, try executing the first t
 
 There are many things that can be customized in this Notebook, e.g. the paths to the trajectories (full, LEV-trimmed, and ESS-trimmed)
 
-`stride` - **Stride for loading trajectory**
-`selection` - **Used for the RMSD comparison. This option can be "protein" or "all"**
-`input_dirs` - **Path fot the full trajectories of the simulation.**
-`trimmed_trajectories_lev` - **Path for the trimmed trajectories of the simulation using LEV**
-`trimmed_trajectories_ess` - **Path for the trimmed trajectories of the simulation using ESS**
-
-`top_file` - **Topology file for the trajectories**
-`nstates` - **Number of states for the MSM model and the PCCA+**
-`anotations`- **Path for the annotations files. The annotations files contains the information of the LEV and ESS termination**
-`SAVE_FRAMES` - **If True, the frames will be saved in the folder frames_closest**
-`frames_closest_folder` - **Folder where the frames will be saved**
-`dist_cmap` - **Color map for the energy plots**
-`size` - **Size of the point in the plots**
+* `stride` - **Stride for loading trajectory**
+* `selection` - **Used for the RMSD comparison. This option can be "protein" or "all"**
+* `input_dirs` - **Path fot the full trajectories of the simulation.**
+* `trimmed_trajectories_lev` - **Path for the trimmed trajectories of the simulation using LEV**
+* `trimmed_trajectories_ess` - **Path for the trimmed trajectories of the simulation using ESS**
+* `top_file` - **Topology file for the trajectories**
+* `nstates` - **Number of states for the MSM model and the PCCA+**
+* `anotations`- **Path for the annotations files. The annotations files contains the information of the LEV and ESS termination**
+* `SAVE_FRAMES` - **If True, the frames will be saved in the folder frames_closest**
+* `frames_closest_folder` - **Folder where the frames will be saved**
+* `dist_cmap` - **Color map for the energy plots**
+* `size` - **Size of the point in the plots**
 
 
 ## Related Publications

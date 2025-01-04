@@ -16,8 +16,6 @@ sampling_rate=0.002  # In ps
 
 # Trajectories files
 input_dir=("./files/xtc_files/output.checkpoint" "./files/xtc_files/output")
-# For multiple directories use the next line instead
-# input_dir=("/home/exouser/trajectories/output.checkpoint" "/home/exouser/trajectories/output")
 input_dirs=$(IFS=,; echo "${input_dir[*]}")
 
 top_file="./files/xtc_files/boxed.pdb"  # Topology file for the trajectories

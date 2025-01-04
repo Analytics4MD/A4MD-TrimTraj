@@ -56,7 +56,7 @@ if [ ! -d "./files/xtc_files" ]; then
     python download_data.py
     echo "Data downloaded successfully!"
 fi
- ----- Generate Annotations -----
+#  ----- Generate Annotations -----
 
 # Check if the annotations folder exists
 if [ ! -d "./results/annotations" ]; then

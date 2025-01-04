@@ -4,7 +4,7 @@
 DEBUG="False"  # Debug mode
 current_datetime=$(date +"%Y-%m-%d_%H-%M-%S")
 
-Check if the results folder exists
+# Check if the results folder exists
 if [ ! -d "./results" ]; then
     # Create the results folder
     mkdir "./results"
@@ -15,7 +15,7 @@ stride=1  # Stride for loading trajectories
 sampling_rate=0.002  # In ps
 
 # Trajectories files
-input_dir=("./files/xtc_files")
+input_dir=("./files/xtc_files/output.checkpoint" "./files/xtc_files/output")
 # For multiple directories use the next line instead
 # input_dir=("/home/exouser/trajectories/output.checkpoint" "/home/exouser/trajectories/output")
 input_dirs=$(IFS=,; echo "${input_dir[*]}")
@@ -49,13 +49,14 @@ var_th_esss=$(IFS=,; echo "${var_th_ess[*]}")
 
 
 # #  ----- Download Full trajectories -----
-
 # Execute download_data.py
-echo "Downloading data..."
-python download_data.py
-echo "Data downloaded successfully!"
-
-#  ----- Generate Annotations -----
+if [ ! -d "./files/xtc_files" ]; then
+    # Create the annotations folder
+    echo "Downloading data..."
+    python download_data.py
+    echo "Data downloaded successfully!"
+fi
+ ----- Generate Annotations -----
 
 # Check if the annotations folder exists
 if [ ! -d "./results/annotations" ]; then

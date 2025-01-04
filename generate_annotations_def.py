@@ -17,6 +17,7 @@ from loguru import logger
 
 
 def load_trajectory(input_dirs, filename):
+    # print("filename",filename)
     trajectories = []
 
     # Prepare trajectory path
@@ -168,6 +169,7 @@ def analyse_trajectory(traj, evs,stable_th_lev,window_lev,tt, window_ess, var_th
 
 def generate_annotation(levs_df, traj, stable_th_lev,window_lev,tt, window_ess, var_th_ess):
     annotations = []
+    # print("subsets",levs_df["subset"],traj.subset)
     traj_levs = levs_df.loc[
                     (levs_df["traj_id"] == str(traj.traj_id))
                     & (levs_df["subset"] == traj.subset), "levs"]

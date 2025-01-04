@@ -137,13 +137,12 @@ if __name__ == "__main__":
 
     # #  -*-*-*-*-*-*-*-*-*-*- Loading annotations file -*-*-*-*-*-*-*-*-*-*-
     logger.info("Loading annotations")
-    annotation_folder = arguments[7]
-    annotation_files = os.listdir(annotation_folder)
+    annotation_folder = arguments[6]
+    # annotation_files = os.listdir(annotation_folder)
     annotation_files = glob.glob(os.path.join(annotation_folder, "*.pkl"))
     annotation_files_lev = []
     annotation_files_ess = []
     for file in annotation_files:
-        print(file)
         if file.startswith("annotations_termination_lev"):
             annotation_files_lev.append(file)
         else:
@@ -162,10 +161,10 @@ if __name__ == "__main__":
 
     # # # # # -*-*-*-*-*-*-*-*-*-*- Trimming trajectories to termination -*-*-*-*-*-*-*-*-*-*-
     # # # Definitions
-    first_batch = int(arguments[8])  # FS1 or FS2 runs first (ie 1 or 2 are trimmed), 0 means trim everything, -1 means dont trim
-    trim_first_rand = arguments[9] == "True"  # Terminate at a random point
-    trial = arguments[10]  # Identifier of random trial [0, ..., 4]
-    run_last_full = arguments[11] == "True"  # Let restarted trajectory run to completion
+    first_batch = int(arguments[7])  # FS1 or FS2 runs first (ie 1 or 2 are trimmed), 0 means trim everything, -1 means dont trim
+    trim_first_rand = arguments[8] == "True"  # Terminate at a random point
+    trial = arguments[9]  # Identifier of random trial [0, ..., 4]
+    run_last_full = arguments[10] == "True"  # Let restarted trajectory run to completion
     logger.info("Trimming trajectories")
 
     trajectories_filenames = trimming_trajectories(

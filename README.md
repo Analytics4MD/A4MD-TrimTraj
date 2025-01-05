@@ -12,6 +12,7 @@
   <a href="#prerequisites">Prerequisites</a> •
   <a href="#dependencies">Dependencies</a> •
   <a href="#installation">Installation</a> •
+  <a href="#generating-early-terminated-trajectories">Generating early-terminated trajectories</a> •
   <a href="#related-publications">Publications</a> •
   <a href="#copyright-and-license">Copyright and License</a>
 </p>
@@ -59,7 +60,7 @@ git clone https://github.com/Analytics4MD/A4MD_termination_trajectories.git
 2. Create your conda environment 
 
 ```
-cd A4MD_conformational_space_validation/
+cd A4MD_termination_trajectories/
 conda create --name validation --file environment.yml
 conda activate validation
 ```

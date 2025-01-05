@@ -100,9 +100,6 @@ def load_annotation_files(annotation_file, input_dirs):
     subset = subset_1 + subset_2
     dfs[0]["subset"] = subset
     annotation_df = pd.concat(dfs, ignore_index=True)
-
-    # logger.info(annotation_df)
-
     return annotation_df
 
 def trim_trajectories(trajectories_df, annotation_df, input_dirs,stride, first_batch=0, trim_first_rand=False, run_last_full=False, termination_criterion="termination_lev", trial=0):
@@ -117,9 +114,6 @@ def trim_trajectories(trajectories_df, annotation_df, input_dirs,stride, first_b
     for tt in range(len(trajectories_df)):
         traj = trajectories_df.iloc[tt]  # sorted_df.iloc[tt]
         total_steps += stride * (traj.n_frames - 1) * 1000
-
-        # if not (traj.subset==input_dirs[0]):
-        #    continue
 
         if (first_batch == 0 or first_batch == 1 and int(traj.traj_id) <= 10) or (
             first_batch == 2 and int(traj.traj_id) > 10

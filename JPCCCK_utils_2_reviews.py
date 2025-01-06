@@ -44,11 +44,6 @@ def plot_free_energy(
         pcca_setsT = pcca_sets
     if pcca_setsT_ess is None:
         pcca_setsT_ess = pcca_sets
-    # align
-    # comparison_lev = [0, 1, 3, 2, 5, 4]  ## TODO: set as argument from users
-    # comparison_ess = [2, 1, 0, 4, 5, 3]  ## TODO: set as argument from users
-    # pcca_setsT = [pcca_setsT[i] for i in comparison_lev]
-    # pcca_setsT_ess = [pcca_setsT_ess[i] for i in comparison_ess]
     fig1, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(20, 5))
     vmax = np.max(free_energy_per_cluster)
     tcf1 = ax1.tricontourf(
@@ -169,30 +164,6 @@ def plot_free_energy(
 
     # ax3.legend()
     fig1.suptitle(title)
-    ## Add legend
-    # legend_elements = [
-    #     mpl.lines.Line2D(
-    #         [0],
-    #         [0],
-    #         marker="o",
-    #         color="w",
-    #         label="Cluster Centers",
-    #         markerfacecolor="black",
-    #         markersize=8,
-    #     ),
-    #     mpl.lines.Line2D(
-    #         [0],
-    #         [0],
-    #         marker="*",
-    #         color="black",
-    #         label="Minimum Free Energy",
-    #         markerfacecolor="white",
-    #         markersize=8,
-    #     ),
-    # ]
-    # ax1.legend(handles=legend_elements)
-    # ax2.legend(handles=legend_elements)
-    # ax3.legend(handles=legend_elements)
 
 
 def find_frames_closest_to_minimum_energy(
@@ -213,9 +184,6 @@ def find_frames_closest_to_minimum_energy(
     pcca_sets = M.metastable_sets
     pcca_setsT = MT.metastable_sets
     pcca_setsT_ess = MT_ess.metastable_sets
-    # print(pcca_sets[5])
-    # print(pcca_setsT[5])
-    # print(pcca_setsT_ess[4])
     frames_closest_to_minimum_energy_coor = []
     frames_closest_to_minimum_energy_coor_T = []
     frames_closest_to_minimum_energy_coor_T_ess = []
@@ -231,17 +199,6 @@ def find_frames_closest_to_minimum_energy(
         closest_10_frame_indexT_ess_total,
     ) = [], [], []
     minimum_energy, minimum_energyT, minimum_energyT_ess = [], [], []
-    # comparison_lev = [0, 1, 2, 4, 5, 3]  ## TODO: set as argument from users -- dihedrals not mapped
-    # comparison_ess = [2, 1, 0, 4, 5, 3]  ## TODO: set as argument from users
-    # comparison_lev = [
-    #     0,
-    #     1,
-    #     3,
-    #     2,
-    #     5,
-    #     4,
-    # ]  ## TODO: set as argument from users -- dihedrals mapped
-    # comparison_ess = [2, 1, 0, 4, 5, 3]  ## TODO: set as argument from users
     if clustT is None:
         clustT = clust
         clustT_ess = clust
@@ -263,27 +220,15 @@ def find_frames_closest_to_minimum_energy(
         coord_cluster_per_stateT_ess = clustT_ess.clustercenters[
             indexes_cluster_centers_per_stateT_ess
         ]
-        # print(indexes_cluster_centers_per_stateT)
-        # print(coord_cluster_per_stateT)
-        # Gets the free energy of the cluster centers in the state
         energy_of_cluster_center_per_state = FES[indexes_cluster_centers_per_state]
         # print("indexes", indexes_cluster_centers_per_stateT)
         energy_of_cluster_center_per_stateT = FES_T[indexes_cluster_centers_per_stateT]
         energy_of_cluster_center_per_stateT_ess = FES_T_ess[
             indexes_cluster_centers_per_stateT_ess
         ]
-        # print(state)
-        # print(indexes_cluster_centers_per_stateT)
-        # print(coord_cluster_per_stateT)
-        # print(energy_of_cluster_center_per_stateT)
-        # print("checking for zeros", fontsize= 14)
-        # if np.any(energy_of_cluster_center_per_state == 0):
-        #     print("full", state)
         if np.any(energy_of_cluster_center_per_stateT == 0):
             print("lev", state)
-        # if np.any(energy_of_cluster_center_per_stateT_ess == 0):
-        #     print("ess", state)
-
+        
         # Gets the index of the cluster center with minimum energy in the state
         index_minimum_energy = np.argmin(energy_of_cluster_center_per_state, axis=0)
         minimum_energy.append(np.min(energy_of_cluster_center_per_state))
@@ -339,39 +284,6 @@ def find_frames_closest_to_minimum_energy(
             [],
             [],
         )
-    # print("antes", fontsize= 14)
-    # print('full',minimum_energy)
-    # print('full',frames_closest_to_minimum_energy_coor)
-    # print('lev',minimum_energyT)
-    # print('lev',frames_closest_to_minimum_energy_coor_T)
-    # print('ess',minimum_energyT_ess)
-    # print('ess',frames_closest_to_minimum_energy_coor_T_ess)
-
-    # ## Aligning
-    # frames_closest_to_minimum_energy_coor_T = [
-    #     frames_closest_to_minimum_energy_coor_T[i] for i in comparison_lev
-    # ]
-    # frames_closest_to_minimum_energy_coor_T_ess = [
-    #     frames_closest_to_minimum_energy_coor_T_ess[i] for i in comparison_ess
-    # ]
-    # frames_closest_to_minimum_energyT = [
-    #     frames_closest_to_minimum_energyT[i] for i in comparison_lev
-    # ]
-    # frames_closest_to_minimum_energyT_ess = [
-    #     frames_closest_to_minimum_energyT_ess[i] for i in comparison_ess
-    # ]
-    # closest_10_frame_indexT_total = [
-    #     closest_10_frame_indexT_total[i] for i in comparison_lev
-    # ]
-    # closest_10_frame_indexT_ess_total = [
-    #     closest_10_frame_indexT_ess_total[i] for i in comparison_ess
-    # ]
-    # minimum_energyT = [minimum_energyT[i] for i in comparison_lev]
-    # minimum_energyT_ess = [minimum_energyT_ess[i] for i in comparison_ess]
-
-    # print('ess',minimum_energyT_ess)
-    # print('ess',frames_closest_to_minimum_energy_coor_T_ess)
-    # print(min_energyT_ess)
 
     return (
         frames_closest_to_minimum_energy_coor,
@@ -410,9 +322,7 @@ def save_10_frames(folder_path, energy_method, frames_closest, mdtrajectories, p
     frames_10_minimum_files = []
     frames_10_minimum_total = []
     frames_10_minimum_files_total = []
-    # print(frames_closest)
     for state, frames_10 in enumerate(frames_closest):
-        # print(type(frames_10))
         for i, frame in enumerate(frames_10):
             frame_in_trajectory = mdtrajectories[frame]
             file_name = os.path.join(
@@ -421,7 +331,6 @@ def save_10_frames(folder_path, energy_method, frames_closest, mdtrajectories, p
             )
             frames_10_minimum_files.append(file_name)
             frames_10_minimum.append(frame_in_trajectory)
-            # print(file_name)
             frame_in_trajectory.save(file_name)
         frames_10_minimum_total.append(frames_10_minimum)
         frames_10_minimum_files_total.append(frames_10_minimum_files)
@@ -455,7 +364,6 @@ def create_pyemma_energy_plots(
     misc_energy = pyemma.plots.plot_free_energy(
         tica_concatenated_full[:, 0],
         tica_concatenated_full[:, 1],
-        # weights=np.concatenate(M.trajectory_weights()),
         cmap="nipy_spectral",
         nbins=200,
         cbar=False,
@@ -487,7 +395,6 @@ def create_pyemma_energy_plots(
     misc_energyT = pyemma.plots.plot_free_energy(
         tica_concatenated_trim[:, 0],
         tica_concatenated_trim[:, 1],
-        # weights=np.concatenate(MT.trajectory_weights()),
         cmap="nipy_spectral",
         nbins=200,
         cbar=False,
@@ -541,14 +448,6 @@ def create_pyemma_energy_plots(
         ax3.legend()
     fig.suptitle(title)
 
-    # # Add legend
-    # legend_elements = [
-    #     mpl.lines.Line2D([0], [0], marker="o", color="w", label="Cluster Centers", markerfacecolor="black", markersize=8),
-    #     mpl.lines.Line2D([0], [0], marker="*", color="black", label="Minimum Free Energy", markerfacecolor="white", markersize=8),
-    # ]
-    # ax1.legend(handles=legend_elements)
-    # ax2.legend(handles=legend_elements)
-    # ax3.legend(handles=legend_elements)
 
 
 def computeRMSD(u1, u2, nstates, selection):

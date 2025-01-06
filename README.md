@@ -18,7 +18,7 @@
 </p>
 
 ## Authors
-Jack Marquez, Silvina Caino-Lores, Michel Cuendet, Ekaterina Kots, Trilce Estrada, Ewa Deelman, Harel Weinstein, and Michela Taufer.
+Jack Marquez, Silvina Caino-Lores, Michel Cuendet, Trilce Estrada, Ewa Deelman, Harel Weinstein, and Michela Taufer.
 
 ## About A4MD
 

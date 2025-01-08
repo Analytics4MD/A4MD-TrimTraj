@@ -1,0 +1,6 @@
+[
+    {
+        "url": "https://dataverse.harvard.edu/api/access/dataset/:persistentId/?persistentId=doi:10.7910/DVN/ML5607",
+        "name_file": "files/xtc_files/trajectories.zip"
+    }
+]

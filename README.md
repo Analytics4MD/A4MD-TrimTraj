@@ -24,7 +24,7 @@ Jack Marquez, Silvina Caino-Lores, Michel Cuendet, Trilce Estrada, Ewa Deelman, 
 
 The project's harnessed knowledge of molecular structures' transformations at runtime can be used to steer simulations to more promising areas of the simulation space, identify the data that should be written to congested parallel file systems, and index generated data for retrieval and post-simulation analysis. Supported by this knowledge, molecular dynamics workflows such as replica exchange simulations, Markov state models, and the string method with swarms of trajectories can be executed from the outside (i.e., without reengineering the molecular dynamics code) 
 
-## About A4MD - TrimTraj
+## About A4MD-TrimTraj
 
 We present TrimTraj, which can reduce the size of the accumulating data set while maintaining the structural attributes, distribution, and relative probability ranking of the minima in the system's free energy map. This component utilizes early termination of individual trajectories identified as unproductive in the sampling of conformational space. The criteria for termination are derived quantities (DQs) such as collective variables (CVs) and secondary quantities calculated from the time series of CVs. 
 
